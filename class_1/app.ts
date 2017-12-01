@@ -201,4 +201,3 @@ console.log(largoDelPoder);
 
 */ 
 // el evento push adjunta un dato mas al arreglo anteriormente declarado
-
