@@ -92,8 +92,40 @@ do {
 
 //******************************tuplas*************/
 
-console.log("****************************************************************************************************************")
+console.log("************************************TUPLAS****************************************************************************")
 
 // las tuplas nos permiten saver que clase de variable iran dentro del arraid  tri vergon
 let computadora:[ string, number, boolean] = ["Fuente Cooler Master 500", 120, true]; 
 
+//***********************************enumeraciones**********************************************************************/
+console.log("*************************************ENUMERACIONES***************************************************************************")
+
+enum Volumen{
+    min =1,
+    med =5, 
+    max = 10 
+}
+
+let sonido:number = Volumen.med; 
+
+console.log(sonido);
+
+console.log("**********************************VOID***************************************************************************");
+
+//el void no puede regresar datos, en este caso no existe el return toda la data la devuelve como undefined 
+function call_EPU():void{
+ console.log("Enable External EPU"); 
+}
+
+let messagex = call_EPU(); 
+console.log(messagex);
+
+console.log("**********************************NEVER***************************************************************************");
+
+//este representa un valor que nunca puede suceder.
+
+function error(ejecutar:string):never{
+ throw new Error(ejecutar);
+}
+
+error("se ha corrompido el sistema... linea E22, inicializansdo protocolo de reinicio");

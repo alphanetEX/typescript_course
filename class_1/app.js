@@ -72,6 +72,29 @@ do {
     contador5++;
 } while (contador5 <= cardinal.length - 1);
 //******************************tuplas*************/
-console.log("****************************************************************************************************************");
+console.log("************************************TUPLAS****************************************************************************");
 // las tuplas nos permiten saver que clase de variable iran dentro del arraid  tri vergon
 var computadora = ["Fuente Cooler Master 500", 120, true];
+//***********************************enumeraciones**********************************************************************/
+console.log("*************************************ENUMERACIONES***************************************************************************");
+var Volumen;
+(function (Volumen) {
+    Volumen[Volumen["min"] = 1] = "min";
+    Volumen[Volumen["med"] = 5] = "med";
+    Volumen[Volumen["max"] = 10] = "max";
+})(Volumen || (Volumen = {}));
+var sonido = Volumen.med;
+console.log(sonido);
+console.log("**********************************VOID***************************************************************************");
+//el void no puede regresar datos, en este caso no existe el return toda la data la devuelve como undefined 
+function call_EPU() {
+    console.log("Enable External EPU");
+}
+var messagex = call_EPU();
+console.log(messagex);
+console.log("**********************************NEVER***************************************************************************");
+//este representa un valor que nunca puede suceder.
+function error(ejecutar) {
+    throw new Error(ejecutar);
+}
+error("se ha corrompido el sistema... linea E22, inicializansdo protocolo de reinicio");
