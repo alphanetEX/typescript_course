@@ -110,7 +110,7 @@ let sonido:number = Volumen.med;
 
 console.log(sonido);
 
-console.log("**********************************VOID***************************************************************************");
+console.log("**********************************VOID retornando funciones***************************************************************************");
 
 //el void no puede regresar datos, en este caso no existe el return toda la data la devuelve como undefined 
 function call_EPU():void{
@@ -120,12 +120,85 @@ function call_EPU():void{
 let messagex = call_EPU(); 
 console.log(messagex);
 
+function call_GPU():string{
+ return "reload devices"; 
+}
+
 console.log("**********************************NEVER***************************************************************************");
 
-//este representa un valor que nunca puede suceder.
+//este representa un valor que nunca puede suceder, este es un exelente evento cuando se corrompe un proyecto como tal 
 
+/*
 function error(ejecutar:string):never{
  throw new Error(ejecutar);
 }
 
+
 error("se ha corrompido el sistema... linea E22, inicializansdo protocolo de reinicio");
+*/
+console.log("**********************************ASERCIONES DE TIPO o CAST***************************************************************************");
+
+// este casteador puede servir para definir la candidad de caracteres a la hora de crear la tal afamada  contrasenia 
+let valorXA:any = "Alphamira";
+let cantidad_caracteres:number = (<string>valorXA).length;
+console.log(`la cantidad de caracteres  es de: ${ cantidad_caracteres }`);
+
+
+console.log("**********************************NULL y UNDEFINED***************************************************************************");
+//son dos tipos de datos muy diferentes den typescript  que la verdad no hacen mucho 
+
+let puto:undefined = undefined; 
+
+console.log("**********************************ARRAID CON EL  EVENTO PUSH***************************************************************************");
+
+let avedorment:number[] = [1,2,3,4,5,6]; 
+avedorment.push(7); 
+console.log(avedorment);
+
+
+/* un pequenio refuerzo  
+
+// Tipos
+let batman:string = "Bruce";
+let superman:string = "Clark";
+
+let existe:boolean = false;
+
+// Tuplas
+let parejaHeroes:[string, string] = ['batman','superman'];
+let villano:[string, number, boolean] = ["Lex Lutor",5,true];
+
+// Arreglos
+let aliados:string[] = ["Mujer Maravilla","Acuaman","San", "Flash"];
+
+//Enumeraciones
+enum fuerzas{
+    flash =5,
+    superman = 100, 
+    Batman = 1,
+    acuaman = 0
+}
+
+
+let fuerzaFlash = fuerzas.flash;
+let fuerzaSuperman = fuerzas.superman;
+let fuerzaBatman = fuerzas.Batman;
+let fuerzaAcuaman = fuerzas.acuaman;
+
+// Retorno de funciones
+function activar_batiseñal():string{
+  return "activada";
+}
+
+function pedir_ayuda():void{
+ console.log("HELP"); 
+}
+
+// Aserciones de Tipo
+let poder:string = "100";
+let largoDelPoder = (<string>poder).length;
+console.log(largoDelPoder);
+
+*/ 
+// el evento push adjunta un dato mas al arreglo anteriormente declarado
+
