@@ -90,21 +90,10 @@ do {
     contador5++; 
 } while (contador5 <= cardinal.length -1);
 
+//******************************tuplas*************/
 
+console.log("****************************************************************************************************************")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// las tuplas nos permiten saver que clase de variable iran dentro del arraid  tri vergon
+let computadora:[ string, number, boolean] = ["Fuente Cooler Master 500", 120, true]; 
 

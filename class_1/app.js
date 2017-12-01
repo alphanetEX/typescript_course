@@ -71,3 +71,7 @@ do {
     console.log("Posicion:" + (contador5 + 1) + "  letra: " + cardinal[contador5]);
     contador5++;
 } while (contador5 <= cardinal.length - 1);
+//******************************tuplas*************/
+console.log("****************************************************************************************************************");
+// las tuplas nos permiten saver que clase de variable iran dentro del arraid  tri vergon
+var computadora = ["Fuente Cooler Master 500", 120, true];
