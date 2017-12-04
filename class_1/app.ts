@@ -51,7 +51,9 @@ console.log(panchimalco);
 console.log(planes_renderos); 
 console.log(pinar); 
 
+//concatenacion normal 
 let contatenar:string = panchimalco + " y " + planes_renderos  + "y finalmente " + pinar;
+//contatenacion con backticks 
 let contact:string = `Los conocidos son: ${ anderson }, ${ francisco}, ${ carlos }`; 
 
 console.log(contatenar);

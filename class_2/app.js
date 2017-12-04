@@ -86,3 +86,91 @@ function capitalizadox(palabra) {
 }
 console.log(nombresx2('anderson', 'Andrade', false));
 console.log('**************PARAMETROS POR DEFECTO DE MANERA SIMPLE ***************');
+var nombrex3 = function (nombre, apellidos, capitalizado) {
+    if (capitalizado === void 0) { capitalizado = true; }
+    if (apellidos && capitalizado) {
+        return "El nombre de usuario es: " + capitalizadov2(nombre) + " " + capitalizadov2(apellidos);
+    }
+    else if (nombre && capitalizado) {
+        return "El nombre de usuario es: " + capitalizadov2(nombre);
+    }
+    else {
+        function error(ejecutar) {
+            throw new Error(ejecutar);
+        }
+        error("se ha corrompido el sistema... linea E22, inicializansdo protocolo de reinicio");
+    }
+};
+function capitalizadov2(palabra) {
+    return palabra.charAt(0).toUpperCase() + palabra.substr(1).toLocaleLowerCase();
+}
+console.log(nombrex3('anderson', 'andrade', true));
+console.log('**************PARAMETROS REST  ***************');
+/*una de las mayores ventajas es de los parametros rest es que se pueden ingrezar una gran cantidad de parametros sin
+  declararos en la funcion */
+function nombre_hardware(nombre_pieza) {
+    var other_paremeters = [];
+    for (var _i = 1; _i < arguments.length; _i++) {
+        other_paremeters[_i - 1] = arguments[_i];
+    }
+    return "Description of components: " + nombre_pieza + "  " + other_paremeters.join(" ");
+}
+var computer = nombre_hardware("Alphanet 00x01:", "Motheboard ASUS X99 WS", "CPU: Intel Xenon 16 cores", "RAM:32GB");
+console.log(nombre_hardware(computer));
+console.log('**************TIPO FUNCION  ***************');
+function caminar(km) {
+    return km;
+}
+function saludar(nombre) {
+    return "" + nombre;
+}
+//variable      //devolvera parametro return tipo string 
+var miFuncion;
+//void es un evento en que no contiene el evento return
+miFuncion = saludar;
+console.log(miFuncion("Anderson"));
+console.log('**************TIPO FUNCION CON El variable tipo VOID***************');
+function llover() {
+    console.log("va a llover");
+}
+var miFunction2; // se declara que retornara de un evento que no tiene return 
+miFunction2 = llover; // se iguala la funcion con el evento llover 
+miFunction2(); // se ejetuta la funcion 
+console.log('**************Practicle ejercices***************');
+// Funciones Básicas
+function sumar(a, b) {
+    return a + b;
+}
+var contar = function (heroes) {
+    return heroes.length;
+};
+var superHeroes = ["Flash", "Arrow", "Superman", "Linterna Verde"];
+console.log("la cantidad de superheroes es: " + contar(superHeroes));
+//Parametros por defecto //era de ocupar un booleano 
+function llamarBatman(llamar) {
+    if (llamar) {
+        console.log("Batiseñal activada");
+    }
+}
+llamarBatman("call");
+// Rest?
+function unirheroes() {
+    var personas = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        personas[_i] = arguments[_i];
+    }
+    return personas.join(", ");
+}
+console.log(unirheroes("Alpha", "Mira", "Hash"));
+// Tipo funcion
+function noHaceNada(numero, texto, booleano) {
+    var haskel = [];
+    for (var _i = 3; _i < arguments.length; _i++) {
+        haskel[_i - 3] = arguments[_i];
+    }
+    console.log("no hace nada");
+}
+// Crear el tipo de funcion que acepte la funcion "noHaceNada"
+var noHaceNadaTampoco;
+noHaceNadaTampoco = noHaceNada;
+noHaceNadaTampoco(13, "alppha", true, "haskel");
