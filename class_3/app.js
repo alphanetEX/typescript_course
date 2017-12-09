@@ -51,3 +51,43 @@ var UAV = {
     }
 };
 console.log('************** Permit Multiple Parts ***************');
+// permit on this variable permint a multiple variable types for evite the any variable 
+var whatever = "Unity Rentals";
+// a esto se le conose como objeto de datos 
+whatever = {
+    color: 'negra',
+    logo: 'Unity Rentals',
+    peso: 400,
+    embergadura: 8
+};
+console.log('************** check type of an object or variable ***************');
+var thing = {
+    color: "blanca",
+    logo: "XAS Dynamics",
+    peso: 400,
+    embergadura: 8
+};
+var alpha = function () {
+    return true;
+};
+console.log(typeof thing);
+console.log(typeof alpha);
+// typeof es una instruccion de javascript para saver que tipo que datos son los que provienen de la variable 
+if (typeof thing === "number") {
+    console.log("thing, its a number");
+}
+else if (typeof thing === "string") {
+    console.log("thing, its a string");
+}
+else if (typeof thing === "object") {
+    console.log("thing, its a objet data ");
+}
+else if (typeof thing === "boolean") {
+    console.log("thing, its a boolean data");
+}
+else {
+    error("error de insercion de datos");
+}
+function error(ejecutar) {
+    throw new Error(ejecutar);
+}

@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    /* Basic Options */
+    "target": "es5",                          /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', or 'ESNEXT'. */
+    "module": "commonjs",                     /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */
+    /* Strict Type-Checking Options */
+    "strict": true,                           /* Enable all strict type-checking options. */
+    "sourceMap": false,                         /*sirve para depurar archivos de typescript */ 
+    "removeComments": true,                      /*sirve para eliminar las lineas de comentarios */
+    "outFile": "build/main.js"
+  },
+  "exclude": [
+    "build"
+  ]
+
+  
+  // incluir y excluir carpetas y/o archivos 
+  // compilar unicamente los archivos que esten dentro de la carpeta app 
+  //"include": [
+  //  "app/**/*"
+  //],
+  // no compilar y excluir las carpetas "node_modules y src" 
+  //"exclude": [
+  // "node_modules", 
+  //  "src/"
+  //]
+}
+
+
+
