@@ -13,6 +13,7 @@ var general_check = /** @class */ (function () {
     }
     return general_check;
 }());
+// this data obtainer in the other functions or clases 
 var pdu = true;
 var battery = true;
 var wimax = true;
@@ -22,4 +23,5 @@ var battery_voltage = 22.4;
 var flight_status = true;
 var current_flights = 54;
 var drone = new general_check(pdu, battery, wimax, ssid, dbm, battery_voltage, flight_status, current_flights); // equal java, the variable drone it is equal to class general check so that obtain 
+//this console log resturn data in the real front aplication  
 console.log(drone); //objet variables to general check 

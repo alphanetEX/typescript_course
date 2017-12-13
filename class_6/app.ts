@@ -30,6 +30,8 @@ class general_check {
 
 
 
+
+// this data obtainer in the other functions or clases 
 let pdu: boolean = true;
 let battery:boolean = true; 
 let wimax:boolean = true; 
@@ -42,6 +44,9 @@ let current_flights:number = 54;
 
 
 let drone:general_check = new general_check( pdu, battery, wimax, ssid, dbm, battery_voltage, flight_status, current_flights); // equal java, the variable drone it is equal to class general check so that obtain 
-console.log (drone);                           //objet variables to general check 
+
+
+//this console log resturn data in the real front aplication  
+console.log (drone);                        //objet variables to general check 
 
 
