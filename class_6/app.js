@@ -154,3 +154,42 @@ console.log(Celphone.name_celphone);
 var celphonex = Celphone.createCelphone();
 // it this a completed instance of  the class 'celphone'  
 console.log(celphonex);
+console.log('************** abstrac class ***************');
+// the 'abstract evit a create instances derivatives of class HardDrive'; 
+//in resume its a container of properties and heridity methods of other class 
+var HardDrive = /** @class */ (function () {
+    function HardDrive(hdd, ssd, sass) {
+        this.hdd = hdd;
+        this.ssd = ssd;
+        this.sass = sass;
+        console.log("discos duros disponibles: " + hdd + " " + ssd + " " + sass);
+    }
+    return HardDrive;
+}());
+var Rack = /** @class */ (function (_super) {
+    __extends(Rack, _super);
+    function Rack(a, b, c) {
+        return _super.call(this, a, b, c) || this;
+    }
+    return Rack;
+}(HardDrive));
+var constant = new Rack("Western Digital", "Avexir", "Seagate");
+console.log(constant);
+console.log('************** private contructor ***************');
+//the idea its a exist a unique instance of class == singleton 
+var StartUAV = /** @class */ (function () {
+    function StartUAV(start) {
+        this.start = start;
+        console.log(start);
+    }
+    StartUAV.call_start = function () {
+        if (!StartUAV.instance) {
+            StartUAV.instance = new StartUAV(true);
+        }
+        return StartUAV.instance;
+    };
+    return StartUAV;
+}());
+// let turnon = new StartUAV(true); 
+var start = StartUAV.call_start();
+console.log(start);

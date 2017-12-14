@@ -208,3 +208,51 @@ let celphonex = Celphone.createCelphone();
 
 // it this a completed instance of  the class 'celphone'  
 console.log(celphonex);
+
+console.log('************** abstrac class ***************');  
+
+// the 'abstract evit a create instances derivatives of class HardDrive'; 
+
+//in resume its a container of properties and heridity methods of other class 
+abstract class HardDrive{
+
+    constructor(public hdd:string, public ssd:string,  public sass:string){
+            console.log(`discos duros disponibles: ${hdd} ${ ssd } ${sass}`); 
+    }
+}
+
+
+class Rack extends HardDrive {
+    constructor(a:string, b:string, c:string){
+        super(a,b,c); 
+    }
+}
+
+let constant:Rack = new Rack("Western Digital", "Avexir", "Seagate"); 
+
+console.log(constant);
+
+
+
+console.log('************** private contructor ***************');  
+//the idea its a exist a unique instance of class == singleton 
+class StartUAV {
+    static instance:StartUAV; 
+
+   private constructor ( public start:boolean){
+     console.log(start);
+    }
+
+    static call_start(){
+        if(!StartUAV.instance){
+            StartUAV.instance = new StartUAV(true); 
+        }
+        return StartUAV.instance;
+    }
+}
+
+
+
+// let turnon = new StartUAV(true); 
+let start = StartUAV.call_start();
+console.log( start  ); 
