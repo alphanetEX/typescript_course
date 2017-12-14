@@ -137,7 +137,7 @@ class Rotors extends Central_Structure{  // Central structrure
 
     public getCurrentVoltage():string{
         console.log("public event reference a protected event of class father class"); 
-        return super.getCurrentVoltage(); 
+        return super.getCurrentVoltage(); //obtainer the protected envent on the father class Central_structure
     }
 }
 
@@ -146,3 +146,40 @@ let rotores:Rotors =  new Rotors("Type: XAS power damped", "Pixhawk 2.1", "Tatu 
 
 console.log(rotores.getCurrentVoltage()); 
 
+
+
+console.log('************** Get and Sets  ***************'); 
+
+class Sleep{
+     private _name:string | undefined; 
+
+     constructor(nombre?:string){
+        this._name = nombre;
+     }
+
+     // normally the objetive to use the instance 'get' is validate if this variables obtain a data  
+     // in resume utilize for control access or data 
+     get nombrex():string{
+        if(this._name == undefined){
+            return `not exist username`; 
+        }else{
+            return   `good dreams: ${ this._name }`;
+        }
+     }
+     //normally to use a instance 'set' its a insert variable without using the constructor of the parent class 
+     set un_puto(puto:string){
+        console.log("pass on the instance set"); 
+        if(puto.length <=3){
+            console.error("your name must have at least a 4 or more characters");
+            throw new Error("Error in sintaxis"); 
+        }else{
+        this._name = puto;
+        } 
+     }
+}
+
+let  dormir:Sleep = new Sleep(); 
+
+dormir.un_puto = "DOU";
+
+console.log(dormir.nombrex); 

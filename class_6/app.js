@@ -92,9 +92,48 @@ var Rotors = /** @class */ (function (_super) {
     }
     Rotors.prototype.getCurrentVoltage = function () {
         console.log("public event reference a protected event of class father class");
-        return _super.prototype.getCurrentVoltage.call(this);
+        return _super.prototype.getCurrentVoltage.call(this); //obtainer the protected envent on the father class Central_structure
     };
     return Rotors;
 }(Central_Structure));
 var rotores = new Rotors("Type: XAS power damped", "Pixhawk 2.1", "Tatu battery");
 console.log(rotores.getCurrentVoltage());
+console.log('************** Get and Sets  ***************');
+var Sleep = /** @class */ (function () {
+    function Sleep(nombre) {
+        this._name = nombre;
+    }
+    Object.defineProperty(Sleep.prototype, "nombrex", {
+        // normally the objetive to use the instance 'get' is validate if this variables obtain a data  
+        // in resume utilize for control access or data 
+        get: function () {
+            if (this._name == undefined) {
+                return "not exist username";
+            }
+            else {
+                return "good dreams: " + this._name;
+            }
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Sleep.prototype, "un_puto", {
+        //normally to use a instance 'set' its a insert variable without using the constructor of the parent class 
+        set: function (puto) {
+            console.log("pass on the instance set");
+            if (puto.length <= 3) {
+                console.error("your name must have at least a 4 or more characters");
+                throw new Error("Error in sintaxis");
+            }
+            else {
+                this._name = puto;
+            }
+        },
+        enumerable: true,
+        configurable: true
+    });
+    return Sleep;
+}());
+var dormir = new Sleep();
+dormir.un_puto = "DOU";
+console.log(dormir.nombrex);

@@ -10,5 +10,10 @@ console.log("hello clas 4");
 
 
 let alphanet:string = "Hola Mundo";  
+console.log(mirahas());
 
-console.log("alphanet");
+
+function mirahas ():string | number {
+    return "alpha"; 
+}
+
