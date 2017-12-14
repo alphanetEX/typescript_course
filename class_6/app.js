@@ -123,6 +123,7 @@ var Sleep = /** @class */ (function () {
             console.log("pass on the instance set");
             if (puto.length <= 3) {
                 console.error("your name must have at least a 4 or more characters");
+                console.log('************** Thorw new Error stop all code  ***************');
                 throw new Error("Error in sintaxis");
             }
             else {
@@ -134,6 +135,22 @@ var Sleep = /** @class */ (function () {
     });
     return Sleep;
 }());
+// this variable dormir its a instance because use the class Sleep 
 var dormir = new Sleep();
-dormir.un_puto = "DOU";
+dormir.un_puto = "AlphanetEX";
 console.log(dormir.nombrex);
+console.log('************** methods and static properties ***************');
+var Celphone = /** @class */ (function () {
+    function Celphone() {
+    }
+    Celphone.createCelphone = function () {
+        console.log("created with static method ");
+        return new Celphone();
+    };
+    Celphone.name_celphone = "Iphone 8 plus";
+    return Celphone;
+}());
+console.log(Celphone.name_celphone);
+var celphonex = Celphone.createCelphone();
+// it this a completed instance of  the class 'celphone'  
+console.log(celphonex);

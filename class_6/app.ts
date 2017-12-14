@@ -171,15 +171,40 @@ class Sleep{
         console.log("pass on the instance set"); 
         if(puto.length <=3){
             console.error("your name must have at least a 4 or more characters");
+            console.log('************** Thorw new Error stop all code  ***************'); 
             throw new Error("Error in sintaxis"); 
         }else{
         this._name = puto;
         } 
      }
 }
-
+// this variable dormir its a instance because use the class Sleep 
 let  dormir:Sleep = new Sleep(); 
 
-dormir.un_puto = "DOU";
+dormir.un_puto = "AlphanetEX";
 
 console.log(dormir.nombrex); 
+
+
+console.log('************** methods and static properties ***************'); 
+
+
+class Celphone {
+    static name_celphone:string = "Iphone 8 plus"; 
+
+    constructor(){
+
+    }
+
+    static createCelphone(){
+        console.log("created with static method ")
+        return new Celphone();
+    }
+}
+
+console.log(Celphone.name_celphone); 
+
+let celphonex = Celphone.createCelphone();
+
+// it this a completed instance of  the class 'celphone'  
+console.log(celphonex);

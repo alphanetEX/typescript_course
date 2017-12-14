@@ -1,4 +1,4 @@
-let HEROE = "Spiderman";
+const HEROE = "Spiderman"; // the variables in statate uPercase its a constat variable
 
 // Declaracion de variables?
 let spiderman = "Peter Parker";
@@ -28,7 +28,8 @@ for(var i=0; i<= versiones.length - 1; i++){
   console.log(spider);
 }
 for (const contator of versiones.length) {
-  var alpha = versiones[iterator];
+  let alpha = versiones[iterator];
   console.log(alpha);
 }
+
 
