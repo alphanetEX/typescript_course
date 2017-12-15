@@ -251,8 +251,8 @@ class StartUAV {
     }
 }
 
-
-
 // let turnon = new StartUAV(true); 
 let start = StartUAV.call_start();
 console.log( start  ); 
+
+
